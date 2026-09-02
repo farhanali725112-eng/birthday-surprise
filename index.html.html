@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="en"></p>
+<p><head></p>
+<p><meta charset="UTF-8"></p>
+<p><meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
+<p><title>For Maryam 💗</title><style></p>
+<p>*{</p>
+<p>  box-sizing:border-box;</p>
+<p>}</p>
+<p><br></p>
+<p>body{</p>
+<p>  margin:0;</p>
+<p>  min-height:100vh;</p>
+<p>  overflow:hidden;</p>
+<p>  font-family:Arial,sans-serif;</p>
+<p>  background:</p>
+<p>    radial-gradient(circle at top left,#ffd6eb 0%,transparent 35%),</p>
+<p>    radial-gradient(circle at bottom right,#d9c2ff 0%,transparent 40%),</p>
+<p>    linear-gradient(135deg,#fff0f7,#f4eaff,#eaf4ff);</p>
+<p>  display:flex;</p>
+<p>  justify-content:center;</p>
+<p>  align-items:center;</p>
+<p>  text-align:center;</p>
+<p>  color:#593052;</p>
+<p>}</p>
+<p><br></p>
+<p>.card{</p>
+<p>  width:90%;</p>
+<p>  max-width:600px;</p>
+<p>  max-height:90vh;</p>
+<p>  overflow:auto;</p>
+<p>  padding:35px 22px;</p>
+<p>  border-radius:35px;</p>
+<p>  background:rgba(255,255,255,.72);</p>
+<p>  border:2px solid rgba(255,255,255,.8);</p>
+<p>  box-shadow:0 20px 60px rgba(140,70,130,.22);</p>
+<p>  backdrop-filter:blur(15px);</p>
+<p>  position:relative;</p>
+<p>  z-index:10;</p>
+<p>}</p>
+<p><br></p>
+<p>.intro{</p>
+<p>  font-size:21px;</p>
+<p>  line-height:1.6;</p>
+<p>  color:#8b477d;</p>
+<p>  margin-bottom:25px;</p>
+<p>}</p>
+<p><br></p>
+<p>.intro span{</p>
+<p>  font-size:35px;</p>
+<p>}</p>
+<p><br></p>
+<p>button{</p>
+<p>  border:0;</p>
+<p>  padding:15px 27px;</p>
+<p>  border-radius:50px;</p>
+<p>  color:white;</p>
+<p>  font-size:17px;</p>
+<p>  font-weight:bold;</p>
+<p>  background:linear-gradient(135deg,#ff6fae,#a66cff);</p>
+<p>  box-shadow:0 8px 25px rgba(214,83,153,.35);</p>
+<p>  cursor:pointer;</p>
+<p>  animation:pulse 1.8s infinite;</p>
+<p>}</p>
+<p><br></p>
+<p>button:active{</p>
+<p>  transform:scale(.95);</p>
+<p>}</p>
+<p><br></p>
+<p>#surprise{</p>
+<p>  display:none;</p>
+<p>  animation:reveal 1.3s ease;</p>
+<p>}</p>
+<p><br></p>
+<p>.crown{</p>
+<p>  font-size:35px;</p>
+<p>  margin-bottom:5px;</p>
+<p>}</p>
+<p><br></p>
+<p>h1{</p>
+<p>  margin:5px 0;</p>
+<p>  font-size:clamp(40px,10vw,65px);</p>
+<p>  background:linear-gradient(90deg,#ff4f9a,#9a5cff,#ff62b0);</p>
+<p>  -webkit-background-clip:text;</p>
+<p>  color:transparent;</p>
+<p>  animation:shine 2s infinite alternate;</p>
+<p>}</p>
+<p><br></p>
+<p>h2{</p>
+<p>  margin:5px 0 18px;</p>
+<p>  font-size:clamp(32px,8vw,48px);</p>
+<p>  color:#c04491;</p>
+<p>}</p>
+<p><br></p>
+<p>.line{</p>
+<p>  width:80px;</p>
+<p>  height:4px;</p>
+<p>  margin:15px auto 20px;</p>
+<p>  border-radius:10px;</p>
+<p>  background:linear-gradient(90deg,#ff73b5,#a66cff);</p>
+<p>}</p>
+<p><br></p>
+<p>.message{</p>
+<p>  font-size:17px;</p>
+<p>  line-height:1.8;</p>
+<p>}</p>
+<p><br></p>
+<p>.quote{</p>
+<p>  margin:20px 5px;</p>
+<p>  padding:18px;</p>
+<p>  border-radius:22px;</p>
+<p>  background:linear-gradient(135deg,rgba(255,220,238,.8),rgba(229,215,255,.8));</p>
+<p>  color:#7b3e70;</p>
+<p>  font-size:18px;</p>
+<p>  font-style:italic;</p>
+<p>}</p>
+<p><br></p>
+<p>.hearts{</p>
+<p>  font-size:35px;</p>
+<p>  margin:15px 0;</p>
+<p>  animation:float 2s infinite alternate;</p>
+<p>}</p>
+<p><br></p>
+<p>.flower{</p>
+<p>  position:fixed;</p>
+<p>  top:-60px;</p>
+<p>  z-index:2;</p>
+<p>  pointer-events:none;</p>
+<p>  animation:fall linear forwards;</p>
+<p>}</p>
+<p><br></p>
+<p>.sparkle{</p>
+<p>  position:fixed;</p>
+<p>  pointer-events:none;</p>
+<p>  z-index:3;</p>
+<p>  animation:sparkle 2s ease-out forwards;</p>
+<p>}</p>
+<p><br></p>
+<p>@keyframes reveal{</p>
+<p>  from{</p>
+<p>    opacity:0;</p>
+<p>    transform:scale(.65) translateY(30px);</p>
+<p>  }</p>
+<p>  to{</p>
+<p>    opacity:1;</p>
+<p>    transform:scale(1) translateY(0);</p>
+<p>  }</p>
+<p>}</p>
+<p><br></p>
+<p>@keyframes pulse{</p>
+<p>  50%{</p>
+<p>    transform:scale(1.06);</p>
+<p>  }</p>
+<p>}</p>
+<p><br></p>
+<p>@keyframes shine{</p>
+<p>  from{</p>
+<p>    filter:drop-shadow(0 0 2px #ffb4d9);</p>
+<p>  }</p>
+<p>  to{</p>
+<p>    filter:drop-shadow(0 0 15px #e6a1ff);</p>
+<p>  }</p>
+<p>}</p>
+<p><br></p>
+<p>@keyframes float{</p>
+<p>  to{</p>
+<p>    transform:translateY(-10px) scale(1.08);</p>
+<p>  }</p>
+<p>}</p>
+<p><br></p>
+<p>@keyframes fall{</p>
+<p>  to{</p>
+<p>    transform:translateY(115vh) rotate(400deg);</p>
+<p>  }</p>
+<p>}</p>
+<p><br></p>
+<p>@keyframes sparkle{</p>
+<p>  0%{</p>
+<p>    opacity:0;</p>
+<p>    transform:scale(.3);</p>
+<p>  }</p>
+<p>  30%{</p>
+<p>    opacity:1;</p>
+<p>  }</p>
+<p>  100%{</p>
+<p>    opacity:0;</p>
+<p>    transform:scale(1.5) translateY(-40px);</p>
+<p>  }</p>
+<p>}</p>
+<p></style></head><body><div class="card">  <div class="intro" id="intro"></p>
+<p>    <span>💌</span><br></p>
+<p>    Maryam, someone has a little surprise</p>
+<p>    waiting for you... 🌸✨</p>
+<p>  </div>  <button id="openBtn" onclick="openSurprise()"></p>
+<p>    💗 Open Your Surprise 💗</p>
+<p>  </button>  <div id="surprise"><div class="crown">👑✨</div></p>
+<p><br></p>
+<p><h1>Happy Birthday</h1></p>
+<p><h2>Maryam 💗</h2></p>
+<p><br></p>
+<p><div class="line"></div></p>
+<p><br></p>
+<p><div class="hearts"></p>
+<p>  🌸 💕 🌷 💖 🌹</p>
+<p></div></p>
+<p><br></p>
+<p><div class="message"></p>
+<p>  Aaj ka din bohat special hai,</p>
+<p>  kyun ke aaj <b>Maryam</b> ka birthday hai. 🎂✨</p>
+<p>  <br><br></p>
+<p><br></p>
+<p>  Dil se dua hai ke tumhari zindagi</p>
+<p>  hamesha phoolon ki tarah khoobsurat,</p>
+<p>  sitaron ki tarah roshan aur</p>
+<p>  khushiyon se bhari rahe. 🌷💫</p>
+<p></div></p>
+<p><br></p>
+<p><div class="quote"></p>
+<p>  “Tumhari har muskurahat ek khoobsurat</p>
+<p>  phool ki tarah hai — hamesha yunhi</p>
+<p>  khilti rehna. 🌸💗”</p>
+<p></div></p>
+<p><br></p>
+<p><div class="message"></p>
+<p>  Allah tumhari har achi dua qabool kare,</p>
+<p>  tumhare har khwab ko khoobsurat haqeeqat</p>
+<p>  banaye aur tumhe hamesha khush rakhe. 🤍✨</p>
+<p>  <br><br></p>
+<p><br></p>
+<p>  <b>Keep smiling, keep shining,</p>
+<p>  and always stay this beautiful soul. 💕</b></p>
+<p></div></p>
+<p><br></p>
+<p><div class="hearts"></p>
+<p>  🎂🌸💗🌷💖🌹✨</p>
+<p></div></p>
+<p><br></p>
+<p><div class="message"></p>
+<p>  <b>Happy Birthday Once Again, Maryam! 🥳💐</b></p>
+<p></div></p>
+<p><br></p>
+<p>  </div></p>
+<p></div><script></p>
+<p><br></p>
+<p>const flowers=[</p>
+<p>  "🌸","🌷","🌹","🌺","🪻","💐","🌻","💮","💕","✨"</p>
+<p>];</p>
+<p><br></p>
+<p>function createFlower(){</p>
+<p><br></p>
+<p>  const f=document.createElement("div");</p>
+<p><br></p>
+<p>  f.className="flower";</p>
+<p><br></p>
+<p>  f.innerText=</p>
+<p>    flowers[Math.floor(Math.random()*flowers.length)];</p>
+<p><br></p>
+<p>  f.style.left=Math.random()*100+"vw";</p>
+<p><br></p>
+<p>  f.style.fontSize=</p>
+<p>    (18+Math.random()*25)+"px";</p>
+<p><br></p>
+<p>  const duration=4+Math.random()*5;</p>
+<p><br></p>
+<p>  f.style.animationDuration=duration+"s";</p>
+<p><br></p>
+<p>  document.body.appendChild(f);</p>
+<p><br></p>
+<p>  setTimeout(()=>{</p>
+<p>    f.remove();</p>
+<p>  },duration*1000);</p>
+<p>}</p>
+<p><br></p>
+<p>function createSparkle(){</p>
+<p><br></p>
+<p>  const s=document.createElement("div");</p>
+<p><br></p>
+<p>  s.className="sparkle";</p>
+<p>  s.innerText="✨";</p>
+<p><br></p>
+<p>  s.style.left=Math.random()*100+"vw";</p>
+<p>  s.style.top=(20+Math.random()*70)+"vh";</p>
+<p>  s.style.fontSize=(15+Math.random()*20)+"px";</p>
+<p><br></p>
+<p>  document.body.appendChild(s);</p>
+<p><br></p>
+<p>  setTimeout(()=>{</p>
+<p>    s.remove();</p>
+<p>  },2000);</p>
+<p>}</p>
+<p><br></p>
+<p>function openSurprise(){</p>
+<p><br></p>
+<p>  document.getElementById("intro").style.display="none";</p>
+<p>  document.getElementById("openBtn").style.display="none";</p>
+<p><br></p>
+<p>  document.getElementById("surprise").style.display="block";</p>
+<p><br></p>
+<p>  // Flower shower 🌸</p>
+<p>  for(let i=0;i<50;i++){</p>
+<p>    setTimeout(createFlower,i*70);</p>
+<p>  }</p>
+<p><br></p>
+<p>  // Sparkle shower ✨</p>
+<p>  for(let i=0;i<30;i++){</p>
+<p>    setTimeout(createSparkle,i*100);</p>
+<p>  }</p>
+<p>}</p>
+<p><br></p>
+<p>setInterval(createFlower,500);</p>
+<p>setInterval(createSparkle,900);</p>
+<p><br></p>
+<p></script></body></p>
+<p></html>
