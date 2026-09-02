@@ -1,313 +1,427 @@
-<!DOCTYPE html><html lang="en"></p>
-<p><head></p>
-<p><meta charset="UTF-8"></p>
-<p><meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
-<p><title>For Maryam 💗</title><style></p>
-<p>*{</p>
-<p>  box-sizing:border-box;</p>
-<p>}</p>
-<p><br></p>
-<p>body{</p>
-<p>  margin:0;</p>
-<p>  min-height:100vh;</p>
-<p>  overflow:hidden;</p>
-<p>  font-family:Arial,sans-serif;</p>
-<p>  background:</p>
-<p>    radial-gradient(circle at top left,#ffd6eb 0%,transparent 35%),</p>
-<p>    radial-gradient(circle at bottom right,#d9c2ff 0%,transparent 40%),</p>
-<p>    linear-gradient(135deg,#fff0f7,#f4eaff,#eaf4ff);</p>
-<p>  display:flex;</p>
-<p>  justify-content:center;</p>
-<p>  align-items:center;</p>
-<p>  text-align:center;</p>
-<p>  color:#593052;</p>
-<p>}</p>
-<p><br></p>
-<p>.card{</p>
-<p>  width:90%;</p>
-<p>  max-width:600px;</p>
-<p>  max-height:90vh;</p>
-<p>  overflow:auto;</p>
-<p>  padding:35px 22px;</p>
-<p>  border-radius:35px;</p>
-<p>  background:rgba(255,255,255,.72);</p>
-<p>  border:2px solid rgba(255,255,255,.8);</p>
-<p>  box-shadow:0 20px 60px rgba(140,70,130,.22);</p>
-<p>  backdrop-filter:blur(15px);</p>
-<p>  position:relative;</p>
-<p>  z-index:10;</p>
-<p>}</p>
-<p><br></p>
-<p>.intro{</p>
-<p>  font-size:21px;</p>
-<p>  line-height:1.6;</p>
-<p>  color:#8b477d;</p>
-<p>  margin-bottom:25px;</p>
-<p>}</p>
-<p><br></p>
-<p>.intro span{</p>
-<p>  font-size:35px;</p>
-<p>}</p>
-<p><br></p>
-<p>button{</p>
-<p>  border:0;</p>
-<p>  padding:15px 27px;</p>
-<p>  border-radius:50px;</p>
-<p>  color:white;</p>
-<p>  font-size:17px;</p>
-<p>  font-weight:bold;</p>
-<p>  background:linear-gradient(135deg,#ff6fae,#a66cff);</p>
-<p>  box-shadow:0 8px 25px rgba(214,83,153,.35);</p>
-<p>  cursor:pointer;</p>
-<p>  animation:pulse 1.8s infinite;</p>
-<p>}</p>
-<p><br></p>
-<p>button:active{</p>
-<p>  transform:scale(.95);</p>
-<p>}</p>
-<p><br></p>
-<p>#surprise{</p>
-<p>  display:none;</p>
-<p>  animation:reveal 1.3s ease;</p>
-<p>}</p>
-<p><br></p>
-<p>.crown{</p>
-<p>  font-size:35px;</p>
-<p>  margin-bottom:5px;</p>
-<p>}</p>
-<p><br></p>
-<p>h1{</p>
-<p>  margin:5px 0;</p>
-<p>  font-size:clamp(40px,10vw,65px);</p>
-<p>  background:linear-gradient(90deg,#ff4f9a,#9a5cff,#ff62b0);</p>
-<p>  -webkit-background-clip:text;</p>
-<p>  color:transparent;</p>
-<p>  animation:shine 2s infinite alternate;</p>
-<p>}</p>
-<p><br></p>
-<p>h2{</p>
-<p>  margin:5px 0 18px;</p>
-<p>  font-size:clamp(32px,8vw,48px);</p>
-<p>  color:#c04491;</p>
-<p>}</p>
-<p><br></p>
-<p>.line{</p>
-<p>  width:80px;</p>
-<p>  height:4px;</p>
-<p>  margin:15px auto 20px;</p>
-<p>  border-radius:10px;</p>
-<p>  background:linear-gradient(90deg,#ff73b5,#a66cff);</p>
-<p>}</p>
-<p><br></p>
-<p>.message{</p>
-<p>  font-size:17px;</p>
-<p>  line-height:1.8;</p>
-<p>}</p>
-<p><br></p>
-<p>.quote{</p>
-<p>  margin:20px 5px;</p>
-<p>  padding:18px;</p>
-<p>  border-radius:22px;</p>
-<p>  background:linear-gradient(135deg,rgba(255,220,238,.8),rgba(229,215,255,.8));</p>
-<p>  color:#7b3e70;</p>
-<p>  font-size:18px;</p>
-<p>  font-style:italic;</p>
-<p>}</p>
-<p><br></p>
-<p>.hearts{</p>
-<p>  font-size:35px;</p>
-<p>  margin:15px 0;</p>
-<p>  animation:float 2s infinite alternate;</p>
-<p>}</p>
-<p><br></p>
-<p>.flower{</p>
-<p>  position:fixed;</p>
-<p>  top:-60px;</p>
-<p>  z-index:2;</p>
-<p>  pointer-events:none;</p>
-<p>  animation:fall linear forwards;</p>
-<p>}</p>
-<p><br></p>
-<p>.sparkle{</p>
-<p>  position:fixed;</p>
-<p>  pointer-events:none;</p>
-<p>  z-index:3;</p>
-<p>  animation:sparkle 2s ease-out forwards;</p>
-<p>}</p>
-<p><br></p>
-<p>@keyframes reveal{</p>
-<p>  from{</p>
-<p>    opacity:0;</p>
-<p>    transform:scale(.65) translateY(30px);</p>
-<p>  }</p>
-<p>  to{</p>
-<p>    opacity:1;</p>
-<p>    transform:scale(1) translateY(0);</p>
-<p>  }</p>
-<p>}</p>
-<p><br></p>
-<p>@keyframes pulse{</p>
-<p>  50%{</p>
-<p>    transform:scale(1.06);</p>
-<p>  }</p>
-<p>}</p>
-<p><br></p>
-<p>@keyframes shine{</p>
-<p>  from{</p>
-<p>    filter:drop-shadow(0 0 2px #ffb4d9);</p>
-<p>  }</p>
-<p>  to{</p>
-<p>    filter:drop-shadow(0 0 15px #e6a1ff);</p>
-<p>  }</p>
-<p>}</p>
-<p><br></p>
-<p>@keyframes float{</p>
-<p>  to{</p>
-<p>    transform:translateY(-10px) scale(1.08);</p>
-<p>  }</p>
-<p>}</p>
-<p><br></p>
-<p>@keyframes fall{</p>
-<p>  to{</p>
-<p>    transform:translateY(115vh) rotate(400deg);</p>
-<p>  }</p>
-<p>}</p>
-<p><br></p>
-<p>@keyframes sparkle{</p>
-<p>  0%{</p>
-<p>    opacity:0;</p>
-<p>    transform:scale(.3);</p>
-<p>  }</p>
-<p>  30%{</p>
-<p>    opacity:1;</p>
-<p>  }</p>
-<p>  100%{</p>
-<p>    opacity:0;</p>
-<p>    transform:scale(1.5) translateY(-40px);</p>
-<p>  }</p>
-<p>}</p>
-<p></style></head><body><div class="card">  <div class="intro" id="intro"></p>
-<p>    <span>💌</span><br></p>
-<p>    Maryam, someone has a little surprise</p>
-<p>    waiting for you... 🌸✨</p>
-<p>  </div>  <button id="openBtn" onclick="openSurprise()"></p>
-<p>    💗 Open Your Surprise 💗</p>
-<p>  </button>  <div id="surprise"><div class="crown">👑✨</div></p>
-<p><br></p>
-<p><h1>Happy Birthday</h1></p>
-<p><h2>Maryam 💗</h2></p>
-<p><br></p>
-<p><div class="line"></div></p>
-<p><br></p>
-<p><div class="hearts"></p>
-<p>  🌸 💕 🌷 💖 🌹</p>
-<p></div></p>
-<p><br></p>
-<p><div class="message"></p>
-<p>  Aaj ka din bohat special hai,</p>
-<p>  kyun ke aaj <b>Maryam</b> ka birthday hai. 🎂✨</p>
-<p>  <br><br></p>
-<p><br></p>
-<p>  Dil se dua hai ke tumhari zindagi</p>
-<p>  hamesha phoolon ki tarah khoobsurat,</p>
-<p>  sitaron ki tarah roshan aur</p>
-<p>  khushiyon se bhari rahe. 🌷💫</p>
-<p></div></p>
-<p><br></p>
-<p><div class="quote"></p>
-<p>  “Tumhari har muskurahat ek khoobsurat</p>
-<p>  phool ki tarah hai — hamesha yunhi</p>
-<p>  khilti rehna. 🌸💗”</p>
-<p></div></p>
-<p><br></p>
-<p><div class="message"></p>
-<p>  Allah tumhari har achi dua qabool kare,</p>
-<p>  tumhare har khwab ko khoobsurat haqeeqat</p>
-<p>  banaye aur tumhe hamesha khush rakhe. 🤍✨</p>
-<p>  <br><br></p>
-<p><br></p>
-<p>  <b>Keep smiling, keep shining,</p>
-<p>  and always stay this beautiful soul. 💕</b></p>
-<p></div></p>
-<p><br></p>
-<p><div class="hearts"></p>
-<p>  🎂🌸💗🌷💖🌹✨</p>
-<p></div></p>
-<p><br></p>
-<p><div class="message"></p>
-<p>  <b>Happy Birthday Once Again, Maryam! 🥳💐</b></p>
-<p></div></p>
-<p><br></p>
-<p>  </div></p>
-<p></div><script></p>
-<p><br></p>
-<p>const flowers=[</p>
-<p>  "🌸","🌷","🌹","🌺","🪻","💐","🌻","💮","💕","✨"</p>
-<p>];</p>
-<p><br></p>
-<p>function createFlower(){</p>
-<p><br></p>
-<p>  const f=document.createElement("div");</p>
-<p><br></p>
-<p>  f.className="flower";</p>
-<p><br></p>
-<p>  f.innerText=</p>
-<p>    flowers[Math.floor(Math.random()*flowers.length)];</p>
-<p><br></p>
-<p>  f.style.left=Math.random()*100+"vw";</p>
-<p><br></p>
-<p>  f.style.fontSize=</p>
-<p>    (18+Math.random()*25)+"px";</p>
-<p><br></p>
-<p>  const duration=4+Math.random()*5;</p>
-<p><br></p>
-<p>  f.style.animationDuration=duration+"s";</p>
-<p><br></p>
-<p>  document.body.appendChild(f);</p>
-<p><br></p>
-<p>  setTimeout(()=>{</p>
-<p>    f.remove();</p>
-<p>  },duration*1000);</p>
-<p>}</p>
-<p><br></p>
-<p>function createSparkle(){</p>
-<p><br></p>
-<p>  const s=document.createElement("div");</p>
-<p><br></p>
-<p>  s.className="sparkle";</p>
-<p>  s.innerText="✨";</p>
-<p><br></p>
-<p>  s.style.left=Math.random()*100+"vw";</p>
-<p>  s.style.top=(20+Math.random()*70)+"vh";</p>
-<p>  s.style.fontSize=(15+Math.random()*20)+"px";</p>
-<p><br></p>
-<p>  document.body.appendChild(s);</p>
-<p><br></p>
-<p>  setTimeout(()=>{</p>
-<p>    s.remove();</p>
-<p>  },2000);</p>
-<p>}</p>
-<p><br></p>
-<p>function openSurprise(){</p>
-<p><br></p>
-<p>  document.getElementById("intro").style.display="none";</p>
-<p>  document.getElementById("openBtn").style.display="none";</p>
-<p><br></p>
-<p>  document.getElementById("surprise").style.display="block";</p>
-<p><br></p>
-<p>  // Flower shower 🌸</p>
-<p>  for(let i=0;i<50;i++){</p>
-<p>    setTimeout(createFlower,i*70);</p>
-<p>  }</p>
-<p><br></p>
-<p>  // Sparkle shower ✨</p>
-<p>  for(let i=0;i<30;i++){</p>
-<p>    setTimeout(createSparkle,i*100);</p>
-<p>  }</p>
-<p>}</p>
-<p><br></p>
-<p>setInterval(createFlower,500);</p>
-<p>setInterval(createSparkle,900);</p>
-<p><br></p>
-<p></script></body></p>
-<p></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Maryam 💗</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --pink: #ff4f9a;
+      --hot-pink: #ff2f83;
+      --purple: #8b5cf6;
+      --lavender: #c084fc;
+      --text: #5a3158;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 16px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: var(--text);
+      text-align: center;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(255, 110, 180, .45), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(166, 108, 255, .42), transparent 27%),
+        radial-gradient(circle at 50% 100%, rgba(255, 205, 232, .65), transparent 35%),
+        linear-gradient(135deg, #fff0f8 0%, #f7edff 48%, #eaf5ff 100%);
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 25% 75%, rgba(255,255,255,.8) 0 2px, transparent 3px),
+        radial-gradient(circle at 75% 35%, rgba(255,255,255,.8) 0 2px, transparent 3px),
+        radial-gradient(circle at 55% 15%, rgba(255,255,255,.7) 0 1.5px, transparent 2.5px);
+      background-size: 120px 120px, 160px 160px, 90px 90px;
+      opacity: .7;
+    }
+
+    .card {
+      width: min(94vw, 680px);
+      padding: 42px 28px;
+      border-radius: 34px;
+      border: 1px solid rgba(255,255,255,.9);
+      background: rgba(255,255,255,.72);
+      box-shadow:
+        0 30px 90px rgba(120, 55, 135, .25),
+        inset 0 1px 0 rgba(255,255,255,.95);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(2px);
+    }
+
+    .card::before {
+      width: 180px;
+      height: 180px;
+      top: -90px;
+      left: -70px;
+      background: rgba(255, 105, 180, .22);
+    }
+
+    .card::after {
+      width: 220px;
+      height: 220px;
+      right: -110px;
+      bottom: -120px;
+      background: rgba(139, 92, 246, .20);
+    }
+
+    .intro {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(18px, 4vw, 23px);
+      line-height: 1.65;
+      color: #81436f;
+      margin-bottom: 28px;
+    }
+
+    .intro-icon {
+      display: inline-block;
+      font-size: 48px;
+      margin-bottom: 8px;
+      animation: float 2.4s ease-in-out infinite;
+      filter: drop-shadow(0 8px 12px rgba(255, 75, 155, .2));
+    }
+
+    #openBtn {
+      position: relative;
+      z-index: 2;
+      border: 0;
+      padding: 16px 30px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      background: linear-gradient(135deg, #ff3f92, #b05cff, #6f6bff);
+      background-size: 200% 200%;
+      box-shadow:
+        0 12px 30px rgba(214, 83, 153, .32),
+        0 0 0 5px rgba(255,255,255,.45);
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+      animation: gradientMove 4s ease infinite, pulse 1.8s ease-in-out infinite;
+    }
+
+    #openBtn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow:
+        0 16px 38px rgba(180, 70, 160, .38),
+        0 0 0 7px rgba(255,255,255,.5);
+    }
+
+    #openBtn:active {
+      transform: scale(.96);
+    }
+
+    #surprise {
+      display: none;
+      position: relative;
+      z-index: 1;
+      animation: reveal 1s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .crown {
+      font-size: 42px;
+      margin-bottom: 4px;
+      animation: float 2.2s ease-in-out infinite;
+    }
+
+    h1 {
+      margin: 5px 0;
+      font-size: clamp(42px, 11vw, 72px);
+      line-height: 1.05;
+      background: linear-gradient(90deg, #ff2f83, #9b5cff, #ff5aaf, #ff2f83);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: textShine 4s linear infinite;
+    }
+
+    h2 {
+      margin: 10px 0 20px;
+      font-size: clamp(30px, 8vw, 48px);
+      color: #c04491;
+      text-shadow: 0 5px 20px rgba(192,68,145,.16);
+    }
+
+    .line {
+      width: 100px;
+      height: 5px;
+      margin: 16px auto 22px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff73b5, #a66cff, #6f9cff);
+      box-shadow: 0 4px 16px rgba(166,108,255,.3);
+    }
+
+    .hearts {
+      font-size: clamp(28px, 7vw, 38px);
+      margin: 18px 0;
+      letter-spacing: 5px;
+      animation: float 2.2s ease-in-out infinite alternate;
+    }
+
+    .message {
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .message b {
+      color: #9a3f7d;
+    }
+
+    .quote {
+      margin: 24px 0;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255,220,238,.85), rgba(229,215,255,.88));
+      box-shadow: 0 12px 28px rgba(130,75,145,.12);
+      color: #743c6b;
+      font-size: 18px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .final {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #8d3d76;
+    }
+
+    .flower,
+    .sparkle,
+    .balloon {
+      position: fixed;
+      pointer-events: none;
+      z-index: 4;
+      user-select: none;
+    }
+
+    .flower {
+      top: -60px;
+      animation: fall linear forwards;
+    }
+
+    .sparkle {
+      animation: sparkle 2s ease-out forwards;
+    }
+
+    .balloon {
+      bottom: -90px;
+      animation: balloonRise linear forwards;
+      opacity: .85;
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(30px) scale(.88); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes pulse {
+      50% { transform: scale(1.045); }
+    }
+
+    @keyframes float {
+      50% { transform: translateY(-9px); }
+    }
+
+    @keyframes gradientMove {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes textShine {
+      to { background-position: 300% center; }
+    }
+
+    @keyframes fall {
+      to { transform: translateY(115vh) rotate(420deg); }
+    }
+
+    @keyframes sparkle {
+      0% { opacity: 0; transform: scale(.3) rotate(0deg); }
+      30% { opacity: 1; }
+      100% { opacity: 0; transform: scale(1.6) translateY(-45px) rotate(90deg); }
+    }
+
+    @keyframes balloonRise {
+      to { transform: translateY(-125vh) rotate(8deg); }
+    }
+
+    @media (max-width: 520px) {
+      body { padding: 16px 10px; }
+      .card { padding: 32px 18px; border-radius: 28px; }
+      .message { font-size: 16px; }
+      .quote { font-size: 16px; }
+      #openBtn { width: min(100%, 310px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <section class="intro" id="intro">
+      <div class="intro-icon">💌</div>
+      <div>Maryam, someone has a little surprise<br>waiting for you... 🌸✨</div>
+    </section>
+
+    <button id="openBtn" type="button" aria-label="Open your birthday surprise">
+      💗 Open Your Surprise 💗
+    </button>
+
+    <section id="surprise">
+      <div class="crown">👑✨</div>
+
+      <h1>Happy Birthday</h1>
+      <h2>Maryam 💗</h2>
+
+      <div class="line"></div>
+
+      <div class="hearts">🌸 💕 🌷 💖 🌹</div>
+
+      <div class="message">
+        Aaj ka din bohat special hai,<br>
+        kyun ke aaj <b>Maryam</b> ka birthday hai. 🎂✨
+
+        <br><br>
+
+        Dil se dua hai ke tumhari zindagi<br>
+        hamesha phoolon ki tarah khoobsurat,<br>
+        sitaron ki tarah roshan aur<br>
+        khushiyon se bhari rahe. 🌷💫
+      </div>
+
+      <div class="quote">
+        “Tumhari har muskurahat ek khoobsurat<br>
+        phool ki tarah hai — hamesha yunhi<br>
+        khilti rehna. 🌸💗”
+      </div>
+
+      <div class="message">
+        Allah tumhari har achi dua qabool kare,<br>
+        tumhare har khwab ko khoobsurat haqeeqat<br>
+        banaye aur tumhe hamesha khush rakhe. 🤍✨
+
+        <br><br>
+
+        <b>Keep smiling, keep shining,<br>
+        and always stay this beautiful soul. 💕</b>
+      </div>
+
+      <div class="hearts">🎂🌸💗🌷💖🌹✨</div>
+
+      <div class="final">
+        <b>Happy Birthday Once Again, Maryam! 🥳💐</b>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const flowers = ["🌸", "🌷", "🌹", "🌺", "🪻", "💐", "🌻", "💮", "💕", "✨"];
+    const balloons = ["🎈", "🎈", "🎈", "💗", "💜", "🌸"];
+
+    function createFlower() {
+      const f = document.createElement("div");
+      f.className = "flower";
+      f.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+      f.style.left = Math.random() * 100 + "vw";
+      f.style.fontSize = 18 + Math.random() * 25 + "px";
+
+      const duration = 4 + Math.random() * 5;
+      f.style.animationDuration = duration + "s";
+      document.body.appendChild(f);
+
+      setTimeout(() => f.remove(), duration * 1000 + 200);
+    }
+
+    function createSparkle() {
+      const s = document.createElement("div");
+      s.className = "sparkle";
+      s.textContent = "✨";
+      s.style.left = Math.random() * 100 + "vw";
+      s.style.top = 15 + Math.random() * 70 + "vh";
+      s.style.fontSize = 15 + Math.random() * 20 + "px";
+      document.body.appendChild(s);
+
+      setTimeout(() => s.remove(), 2100);
+    }
+
+    function createBalloon() {
+      const b = document.createElement("div");
+      b.className = "balloon";
+      b.textContent = balloons[Math.floor(Math.random() * balloons.length)];
+      b.style.left = Math.random() * 100 + "vw";
+      b.style.fontSize = 25 + Math.random() * 28 + "px";
+
+      const duration = 7 + Math.random() * 6;
+      b.style.animationDuration = duration + "s";
+      document.body.appendChild(b);
+
+      setTimeout(() => b.remove(), duration * 1000 + 200);
+    }
+
+    function openSurprise() {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("openBtn").style.display = "none";
+      document.getElementById("surprise").style.display = "block";
+
+      for (let i = 0; i < 55; i++) {
+        setTimeout(createFlower, i * 65);
+      }
+
+      for (let i = 0; i < 35; i++) {
+        setTimeout(createSparkle, i * 90);
+      }
+
+      for (let i = 0; i < 14; i++) {
+        setTimeout(createBalloon, i * 180);
+      }
+    }
+
+    document.getElementById("openBtn").addEventListener("click", openSurprise);
+
+    setInterval(createFlower, 650);
+    setInterval(createSparkle, 950);
+    setInterval(createBalloon, 3500);
+  </script>
+</body>
+</html>
